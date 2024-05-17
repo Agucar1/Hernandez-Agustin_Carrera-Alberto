@@ -24,7 +24,7 @@ public class OdontologoDAOMap implements iDao<Odontologo>{
     }
     @Override
     public Odontologo guardar(Odontologo o) {
-        String errorMsg = "Error al guardar odontologo";
+        String errorMsg = "Error al guardar odontologo Map";
         logger.info("Iniciando la operacion para guardar odontologo");
         AtomicInteger nextId = this.currentId;
         nextId.addAndGet(BigInteger.ONE.intValue());
@@ -59,6 +59,7 @@ public class OdontologoDAOMap implements iDao<Odontologo>{
 
     @Override
     public List buscarTodos() {
+        logger.info("Iniciando la operacion para listar odontologos Map");
         return Arrays.asList(odontologoMap.entrySet().toArray());
     }
 

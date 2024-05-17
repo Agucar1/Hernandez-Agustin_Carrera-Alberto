@@ -16,8 +16,11 @@ public class BD {
             "CEDULA VARCHAR(100) NOT NULL, FECHA_INGRESO DATE NOT NULL, DOMICILIO_ID INT NOT NULL )"; //<<-- FK
     private static final String SQL_DROP_CREATE_DOM="DROP TABLE IF EXISTS DOMICILIOS; " +
             "CREATE TABLE DOMICILIOS (ID INT AUTO_INCREMENT PRIMARY KEY, CALLE VARCHAR(100) NOT NULL, NUMERO INT NOT NULL, LOCALIDAD VARCHAR(100) NOT NULL, PROVINCIA VARCHAR(100) NOT NULL)";
+    private static final  String SQL_DROP_CREATE_ODO= "DROP TABLE IF EXISTS ODONTOLOGOS;" + "CREATE TABLE ODONTOLOGOS (CEDULA INT NOT NULL, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL)";
+
     private static final String SQL_PRUEBA="INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID) VALUES ('Jorgito','Pereyra','111111','2024-05-16', 1), ('German','Fraire','22222','2024-05-10',2); " +
-            "INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')";
+            "INSERT INTO DOMICILIOS  (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES ('Siempre Viva',742,'Springfield','USA'),('Av. Uruguay',345,'Punta del Este','Uruguay')" +
+            ";INSERT INTO ODONTOLOGOS (CEDULA, NOMBRE, APELLIDO) VALUES ('999999','Rodolfo','Perez')";
     public static void crearTablas(){
         Connection connection= null;
         try{
@@ -25,8 +28,10 @@ public class BD {
             Statement statement= connection.createStatement();
             statement.execute(SQL_DROP_CREATE_DOM);
             statement.execute(SQL_DROP_CREATE_PAC);
+            statement.execute(SQL_DROP_CREATE_ODO);
+
             statement.execute(SQL_PRUEBA);
-            logger.info("tabla creada con exito");
+            logger.info("Tabla creada con exito");
 
 
 
