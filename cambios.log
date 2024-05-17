@@ -1,0 +1,7 @@
+[2024-05-16 21:11:14] [ INFO ] [BD:34] Tabla creada con exito
+[2024-05-16 21:11:14] [ INFO ] [PacienteDAOH2:28] Iniciando la operacion para guardar odontologo
+[2024-05-16 21:11:14] [ INFO ] [PacienteDAOH2:36] Odontologo guardado con éxito
+[2024-05-16 21:11:14] [ INFO ] [PacienteDAOH2:62] Iniciando la operacion para listar odontologos Map
+[2024-05-16 21:11:14] [ INFO ] [DomicilioDAOH2:57] Iniciando la operacion para listar odontologos H2
+[2024-05-16 21:11:14] [ INFO ] [DomicilioDAOH2:21] Guardando datos del odontologo H2
+[2024-05-16 21:11:14] [ INFO ] [DomicilioDAOH2:32] objeto guardado en la tabla
