@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OdontologoDAOH2 implements iDao<Odontologo>{
-    private static final Logger logger= Logger.getLogger(DomicilioDAOH2.class);
-    private static final String SQL_INSERT="INSERT INTO ODONTOLOGOS VALUES(?,?,?)";
+    private static final Logger logger= Logger.getLogger(OdontologoDAOH2.class);
+    private static final String SQL_INSERT="INSERT INTO ODONTOLOGOS VALUES(NEXT VALUE FOR ODO_SEQ,?,?,?)";
 
     private static final String SQL_SELECT="SELECT * FROM ODONTOLOGOS";
 

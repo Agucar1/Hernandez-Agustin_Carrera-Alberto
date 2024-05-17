@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class OdontologoDAOMap implements iDao<Odontologo>{
-    private static final Logger logger= Logger.getLogger(PacienteDAOH2.class);
+    private static final Logger logger= Logger.getLogger(OdontologoDAOMap.class);
 
     private Map<Integer, Odontologo> odontologoMap;
 
